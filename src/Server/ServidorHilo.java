@@ -46,12 +46,16 @@ public class ServidorHilo extends Thread {
 	    }
 
 	 	private String decidirGanador(String eleccionCliente, String eleccionServidor) {
+	 		
 	        if (eleccionCliente.equals(eleccionServidor)) {
 	            return "Empate";
+	            
 	        } else if ((eleccionCliente.equals("piedra") && eleccionServidor.equals("tijera")) ||
-	                   (eleccionCliente.equals("papel") && eleccionServidor.equals("piedra")) ||
+	                   (eleccionCliente.equals("papel") && eleccionServidor.equals("piedra"))  ||
 	                   (eleccionCliente.equals("tijera") && eleccionServidor.equals("papel"))) {
+	        	
 	            return "Ganaste";
+	            
 	        } else {
 	            return "Perdiste";
 	        }
