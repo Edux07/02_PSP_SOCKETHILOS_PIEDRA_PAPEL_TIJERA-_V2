@@ -23,10 +23,10 @@ public class ServidorHilo extends Thread {
                 String eleccionCliente = bf.readLine();
                 System.out.println("Elección del cliente: " + eleccionCliente);
 
-                String eleccionServidor = eligeAleatorio();
+                String eleccionServidor = Aleatorio();
                 System.out.println("Elección del servidor: " + eleccionServidor);
 
-                String resultado = determinarGanador(eleccionCliente, eleccionServidor);
+                String resultado = decidirGanador(eleccionCliente, eleccionServidor);
                 System.out.println("Resultado de la ronda: " + resultado);
 
                 salida.println(resultado);
@@ -39,13 +39,13 @@ public class ServidorHilo extends Thread {
 			// TODO: handle exception
 		}
 	}
-	 	private String eligeAleatorio() {
+	 	private String Aleatorio() {
 	        String[] opciones = {"piedra", "papel", "tijera"};
 	        int indice = (int) (Math.random() * opciones.length);
 	        return opciones[indice];
 	    }
 
-	 	private String determinarGanador(String eleccionCliente, String eleccionServidor) {
+	 	private String decidirGanador(String eleccionCliente, String eleccionServidor) {
 	        if (eleccionCliente.equals(eleccionServidor)) {
 	            return "Empate";
 	        } else if ((eleccionCliente.equals("piedra") && eleccionServidor.equals("tijera")) ||
