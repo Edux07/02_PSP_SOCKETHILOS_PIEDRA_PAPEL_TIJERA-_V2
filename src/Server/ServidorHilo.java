@@ -36,7 +36,7 @@ public class ServidorHilo extends Thread {
 
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 	 	private String Aleatorio() {
