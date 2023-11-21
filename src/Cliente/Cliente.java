@@ -26,7 +26,7 @@ public class Cliente {
             InputStreamReader entrada = new InputStreamReader(socketServer.getInputStream());
             BufferedReader bf = new BufferedReader(entrada);
 
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 8; i++) {
                 System.out.print("Ingresa tu elección (piedra, papel, tijera): ");
                 String eleccion = sc.nextLine();
 
